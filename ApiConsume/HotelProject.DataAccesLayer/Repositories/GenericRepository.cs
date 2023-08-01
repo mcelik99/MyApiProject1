@@ -36,11 +36,13 @@ namespace HotelProject.DataAccesLayer.Repositories
         public void Insert(T t)
         {
             _context.Add(t);
+            _context.SaveChanges();
         }
 
         public void Update(T t)
         {
             _context.Update(t);
+            _context.SaveChanges();
         }
     }
 }
