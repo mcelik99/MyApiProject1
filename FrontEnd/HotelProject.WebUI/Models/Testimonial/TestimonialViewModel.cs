@@ -1,25 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Principal;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HotelProject.EntityLayer.Concrete
+﻿namespace HotelProject.WebUI.Models.Testimonial
 {
-    public class Testimonial
+    public class TestimonialViewModel
     {
-
         public int TestimonialId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
         public string Image { get; set; }
-
-
-
-
-
 
     }
 }
