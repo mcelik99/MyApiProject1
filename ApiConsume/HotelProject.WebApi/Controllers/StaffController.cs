@@ -10,7 +10,7 @@ namespace HotelProject.WebApi.Controllers
     [ApiController]
     public class StaffController : ControllerBase
     {
-        private IStaffService _staffService;
+        private readonly IStaffService _staffService;
 
         public StaffController(IStaffService staffService)
         {
