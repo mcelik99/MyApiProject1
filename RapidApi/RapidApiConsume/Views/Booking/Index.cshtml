@@ -1,6 +1,7 @@
-﻿@model List<ExchanceViewModel.Exchange_Rates>
+﻿@model List<BookingApiViewModel.Result>
 @{
     Layout = null;
+    int count = 0;
 }
 
 <a href="~/lib/bootstrap/dist/css/bootstrap.css.map">~/lib/bootstrap/dist/css/bootstrap.css.map</a>
@@ -12,14 +13,20 @@
     <br /><br />
     <table class="table table-bordered">
         <tr>
-            <th>Döviz Kodu</th>
-            <th>Birim Fiyat</th>
+            <th>#</th>
+            <th>Otel Adı</th>
+            <th>Otel Puanı</th>
+            <th>Otel Detaylar</th>
         </tr>
         @foreach (var item in Model)
         {
+            count++;
             <tr>
-                <td>@item.currency</td>
-                <td>@item.exchange_rate_buy</td>
+                <th>@count</th>
+                <td>@item.hotel_name</td>
+                <td>@item.review_score</td>
+                <td><a href="#" class="btn btn-outline-dark">Detaylar</a> </td>
+
             </tr>
         }
     </table>
