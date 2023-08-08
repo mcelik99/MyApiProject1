@@ -12,17 +12,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{47
 		Adımlar.txt = Adımlar.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.WebApi", "ApiConsume\HotelProject.WebApi\HotelProject.WebApi.csproj", "{37FD6A74-3E35-4288-96E3-CEEB285A822D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.WebApi", "ApiConsume\HotelProject.WebApi\HotelProject.WebApi.csproj", "{37FD6A74-3E35-4288-96E3-CEEB285A822D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.EntityLayer", "ApiConsume\HotelProject.EntityLayer\HotelProject.EntityLayer.csproj", "{1BDB6C88-D663-4A2B-89AE-FD11464BBC2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.EntityLayer", "ApiConsume\HotelProject.EntityLayer\HotelProject.EntityLayer.csproj", "{1BDB6C88-D663-4A2B-89AE-FD11464BBC2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.DataAccesLayer", "ApiConsume\HotelProject.DataAccesLayer\HotelProject.DataAccesLayer.csproj", "{E89FA7FF-8707-4D84-B1C4-140E87ECF163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.DataAccesLayer", "ApiConsume\HotelProject.DataAccesLayer\HotelProject.DataAccesLayer.csproj", "{E89FA7FF-8707-4D84-B1C4-140E87ECF163}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.BusinessLayer", "ApiConsume\HotelProject.BusinessLayer\HotelProject.BusinessLayer.csproj", "{60E88BDE-8BB4-487A-B0EC-2F07D73E5111}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.BusinessLayer", "ApiConsume\HotelProject.BusinessLayer\HotelProject.BusinessLayer.csproj", "{60E88BDE-8BB4-487A-B0EC-2F07D73E5111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.DtoLayer", "ApiConsume\HotelProject.DtoLayer\HotelProject.DtoLayer.csproj", "{197DC37B-902E-4A02-883C-25AB47C14025}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.DtoLayer", "ApiConsume\HotelProject.DtoLayer\HotelProject.DtoLayer.csproj", "{197DC37B-902E-4A02-883C-25AB47C14025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelProject.WebUI", "FrontEnd\HotelProject.WebUI\HotelProject.WebUI.csproj", "{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelProject.WebUI", "FrontEnd\HotelProject.WebUI\HotelProject.WebUI.csproj", "{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapiApi", "RapiApi", "{F8D1837C-BB60-4BA9-9187-1544DC04396D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidApiConsume", "RapidApi\RapidApiConsume\RapidApiConsume.csproj", "{036E1E33-735B-40C0-9638-3853DFD3D605}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -54,6 +58,10 @@ Global
 		{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{036E1E33-735B-40C0-9638-3853DFD3D605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{036E1E33-735B-40C0-9638-3853DFD3D605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{036E1E33-735B-40C0-9638-3853DFD3D605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{036E1E33-735B-40C0-9638-3853DFD3D605}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +73,7 @@ Global
 		{60E88BDE-8BB4-487A-B0EC-2F07D73E5111} = {E2A46780-2522-400E-9210-B8957F95BFD2}
 		{197DC37B-902E-4A02-883C-25AB47C14025} = {E2A46780-2522-400E-9210-B8957F95BFD2}
 		{F493F0F7-A4BB-4F1B-80D4-4E91E9FD3605} = {A9739850-B5F1-45FA-8798-255E61072D90}
+		{036E1E33-735B-40C0-9638-3853DFD3D605} = {F8D1837C-BB60-4BA9-9187-1544DC04396D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DFE7C4A-8F73-4A9F-BFFC-8B9541278CBC}
