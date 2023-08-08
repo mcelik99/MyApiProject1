@@ -59,6 +59,7 @@ namespace WebApiJwt
             }
 
             app.UseRouting();
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
