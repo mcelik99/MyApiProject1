@@ -1,0 +1,41 @@
+﻿@model List<BookingApiViewModel.Result>
+@{
+    Layout = null;
+    int count = 0;
+}
+<div class="container">
+    <br /><br />
+ @using (Html.BeginForm("Index", "BookingByCity", FormMethod.Post))
+        {
+            <label>Şehir Id Bilgisi Giriniz</label>
+            <input type="text" class="form-control" name="cityId" />
+            <br />
+            <button class="btn btn-primary">Şehir İçin Otel  bul</button>
+        }
+<a href="~/lib/bootstrap/dist/css/bootstrap.css.map">~/lib/bootstrap/dist/css/bootstrap.css.map</a>
+<a href="~/lib/bootstrap/dist/css/bootstrap.min.css.map">~/lib/bootstrap/dist/css/bootstrap.min.css.map</a>
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+ <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Otel Adı</th>
+            <th>Otel Puanı</th>
+            <th>Otel Detaylar</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <th>@count</th>
+                <td>@item.hotel_name</td>
+                <td>@item.review_score</td>
+                <td><a href="#" class="btn btn-outline-dark">Detaylar</a> </td>
+
+            </tr>
+        }
+    </table>
+
+</div>
