@@ -38,6 +38,10 @@ namespace HotelProject.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddGuest(CreateGuestDto  createGuestDto)
         {
+            if(ModelState.IsValid) 
+            {
+
+            
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createGuestDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -47,6 +51,11 @@ namespace HotelProject.WebUI.Controllers
                 return RedirectToAction("Index");
             }
             return View();
+            }
+            else
+            {
+                return View();
+            }
         }
 
         public async Task<IActionResult> DeleteGuest(int id)
