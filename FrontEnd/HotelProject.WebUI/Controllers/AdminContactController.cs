@@ -57,6 +57,43 @@ namespace HotelProject.WebUI.Controllers
                 return View("Error", ex); 
             }
         }
+        public async Task<IActionResult> Sendbox()
+        {
+            try
+            {
+                var client = _httpClientFactory.CreateClient();
+                var responseMessage = await client.GetAsync("http://localhost:5000/api/SendMessage");
+
+                if (responseMessage.IsSuccessStatusCode)
+                {
+                    var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                    var values = JsonConvert.DeserializeObject<List<ResultSendboxDto>>(jsonData);
+
+                    if (values != null)
+                    {
+                        return View(values);
+                    }
+                    else
+                    {
+                        // Gelen veri null ise veya boş ise uygun bir işlem yap
+
+                        return View("NoDataFound");
+                    }
+                }
+                else
+                {
+                    // API'den geçerli bir yanıt alınamadıysa uygun bir işlem yap.
+
+                    return View("ApiError");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hata oluşursa uygun bir işlem yap.
+
+                return View("Error", ex);
+            }
+        }
         [HttpGet]
         public IActionResult AddSendMessage()
         {
