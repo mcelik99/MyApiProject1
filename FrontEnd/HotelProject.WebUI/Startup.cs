@@ -33,6 +33,7 @@ namespace HotelProject.WebUI
 
             services.AddHttpClient();
             services.AddTransient<IValidator<CreateGuestDto>, CreateGuestValidator>();
+            services.AddTransient<IValidator<UpdateGuestDto>, UpdateGuestValidator>();
             services.AddControllersWithViews().AddFluentValidation();
 
             services.AddAutoMapper(typeof(Startup));
