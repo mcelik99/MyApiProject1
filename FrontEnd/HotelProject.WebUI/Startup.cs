@@ -48,6 +48,13 @@ namespace HotelProject.WebUI
                 .Build();
                 config.Filters.Add(new AuthorizeFilter(policy));
             });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromDays(1);
+                options.LoginPath = "/Login/Index/";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
