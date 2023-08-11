@@ -68,6 +68,8 @@ namespace HotelProject.WebUI
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseStatusCodePagesWithRedirects("/ErrorPage/Error404");
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseAuthentication();
 
