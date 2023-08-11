@@ -19,6 +19,11 @@ namespace HotelProject.BusinessLayer.Concrete
             _sendMessageDal = sendMessageDal;
         }
 
+        public int TGetSendMessageCount()
+        {
+           return _sendMessageDal.GetSendMessageCount();
+        }
+
         public void TDelete(SendMessage t)
         {
             _sendMessageDal.Delete(t);
