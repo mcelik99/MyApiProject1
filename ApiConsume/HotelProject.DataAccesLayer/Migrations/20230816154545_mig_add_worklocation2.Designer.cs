@@ -4,14 +4,16 @@ using HotelProject.DataAccesLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HotelProject.DataAccesLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230816154545_mig_add_worklocation2")]
+    partial class mig_add_worklocation2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -144,10 +146,7 @@ namespace HotelProject.DataAccesLayer.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<string>("WorkDepartment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("WorkLocationId")
+                    b.Property<int?>("WorkLocationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -552,13 +551,9 @@ namespace HotelProject.DataAccesLayer.Migrations
 
             modelBuilder.Entity("HotelProject.EntityLayer.Concrete.AppUser", b =>
                 {
-                    b.HasOne("HotelProject.EntityLayer.Concrete.WorkLocation", "WorkLocation")
+                    b.HasOne("HotelProject.EntityLayer.Concrete.WorkLocation", null)
                         .WithMany("AppUsers")
-                        .HasForeignKey("WorkLocationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("WorkLocation");
+                        .HasForeignKey("WorkLocationId");
                 });
 
             modelBuilder.Entity("HotelProject.EntityLayer.Concrete.Contact", b =>
