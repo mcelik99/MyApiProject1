@@ -68,6 +68,9 @@ namespace HotelProject.WebApi
             services.AddScoped<IWorkLocationDal, EfWorkLocationDal>();
             services.AddScoped<IWorkLocationService, WorkLocationManager>();
 
+            services.AddScoped<IAppUserDal, EfAppUserDal>();
+            services.AddScoped<IAppUserService, AppUserManager>();
+
             services.AddAutoMapper(typeof(Startup));
 
             services.AddCors(opt =>

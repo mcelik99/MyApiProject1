@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelProject.DataAccesLayer.Abstract
+namespace HotelProject.BusinessLayer.Abstract
 {
-    public interface IAppUserDal : IGenericDal<AppUser>
+    public interface IAppUserService : IGenericService<AppUser>
     {
-        List<AppUser> UserListWithWorkLocation();
+        List<AppUser> TUserListWithWorkLocation();
     }
 }
