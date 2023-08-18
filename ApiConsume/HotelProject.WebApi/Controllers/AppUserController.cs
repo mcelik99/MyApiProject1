@@ -5,7 +5,7 @@ namespace HotelProject.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AppUserController : Controller
+    public class AppUserController : ControllerBase
     {
         private readonly IAppUserService _appUserService;
 
