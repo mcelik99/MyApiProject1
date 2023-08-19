@@ -62,5 +62,10 @@ namespace HotelProject.BusinessLayer.Concrete
         {
             _bookingDal.BookingStatusChangeApproved2(id);
         }
+
+        public void TBookingStatusChangeCancel(int id)
+        {
+            _bookingDal.BookingStatusChangeCancel(id);
+        }
     }
 }

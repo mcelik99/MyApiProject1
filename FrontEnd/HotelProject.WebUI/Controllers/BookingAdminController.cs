@@ -53,7 +53,16 @@ namespace HotelProject.WebUI.Controllers
                 return RedirectToAction("Index");
             }
             return View();
-
+        }
+        public async Task<IActionResult> CancelRezervation(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"http://localhost:5000/api/Booking/BookingCancel?id={id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
         }
     }
 }
